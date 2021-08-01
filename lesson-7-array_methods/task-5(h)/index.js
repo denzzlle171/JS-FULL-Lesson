@@ -6,5 +6,6 @@ const squareArray = (numbArray) => {
   }
   return numbArray.map((elemtnt) => elemtnt * elemtnt);
 };
+
 console.log(squareArray(numbArray));
 console.log(numbArray);
