@@ -3,6 +3,7 @@ let balance = [97000, 84000, 20478, 103000, 2300];
 
 const withdraw = (clients, balances, client, amount) => {
   let item = clients.indexOf(client);
+  console.log(item);
   if (balances[item] < amount) {
     return -1;
   } else {
@@ -10,4 +11,4 @@ const withdraw = (clients, balances, client, amount) => {
   }
   return balances[item];
 };
-console.log(withdraw(clients, balance, 'Mike', 150700));
+console.log(withdraw(clients, balance, 'Mike', 100));
