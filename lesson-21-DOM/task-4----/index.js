@@ -6,7 +6,7 @@ const getTitle = () => {
   console.log(textTitle.textContent);
   return textTitle.textContent;
 };
-getTitle();
+// getTitle();
 
 // export
 const getDescription = () => {
@@ -15,7 +15,7 @@ const getDescription = () => {
   return textDesc.innerText;
 };
 
-getDescription();
+// getDescription();
 
 // export
 const getPlants = () => {
@@ -23,7 +23,7 @@ const getPlants = () => {
   console.log(textPlans.innerHTML);
   return textPlans.innerHTML;
 };
-getPlants();
+// getPlants();
 
 // export
 const getGoal = () => {
@@ -31,4 +31,4 @@ const getGoal = () => {
   console.log(textGoal.outerHTML);
   return textGoal.outerHTML;
 };
-getGoal();
+// getGoal();
