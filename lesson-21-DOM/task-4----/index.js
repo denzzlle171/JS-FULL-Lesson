@@ -14,7 +14,7 @@ export const getDescription = () => {
 };
 // getDescription();
 
-export const getPlants = () => {
+export const getPlans = () => {
   const textPlans = document.querySelector('.plans');
   console.log(textPlans.innerHTML);
   return textPlans.innerHTML;
