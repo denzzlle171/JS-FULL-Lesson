@@ -46,6 +46,7 @@ data-sector-number="${sectorNumber}"
   arenaElem.innerHTML = sectorsString;
 };
 
+// event delegation
 const onSeatSelect = (event) => {
   const isSeat = event.target.classList.contains('sector__seat');
   if (!isSeat) {
