@@ -47,8 +47,14 @@ const createButtom = document.querySelector('.create-task-btn');
 const createInput = document.querySelector('.task-input');
 const createNewTask = () => {
   const createText = createInput.value;
+  tasks.map((elem) => {
+    elem.data = new Date();
+  });
+
   if (createText !== '') {
-    tasks.push({ text: createText, done: false });
+    tasks.push({ text: createText, done: false, data: new Date() });
+
+    console.log(tasks);
   }
 
   createInput.value = '';
