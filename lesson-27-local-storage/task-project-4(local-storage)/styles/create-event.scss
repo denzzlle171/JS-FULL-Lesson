@@ -1,0 +1,64 @@
+@import "varible.scss";
+// стили формы события внутри модального окна
+.create-event-btn {
+    width: 100px;
+    border-radius: 48px;
+    border-radius: transparent;
+    box-shadow: 0px 5px 3px -4px #474747;
+    color: $colore-icon-text;
+}
+
+input,
+textarea {
+    outline: none;
+    border: none;
+    border: 1px solid $colore-grid;
+}
+
+.modal__content .event-form {
+    display: flex;
+    flex-direction: column;
+    border: none;
+
+    &__field {
+        margin-bottom: 60px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__submit-btn {
+        display: block;
+        color: white;
+        background: $color-for-change;
+        width: 120px;
+        height: 35px;
+        border-radius: 4px;
+        border: none;
+        margin-left: auto;
+        margin-right: 0px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__title {
+        font-size: 20px;
+        border: none;
+        border-bottom: $color-for-change 3px solid;
+        margin-left: 40px;
+    }
+    &__time {
+        margin-left: 20px;
+    }
+    &__description {
+        border: none;
+        resize: none;
+        margin-left: 20px;
+        width: 100%;
+    }
+    .form-description {
+        display: flex;
+    }
+    .form__time {
+        display: flex;
+    }
+}
