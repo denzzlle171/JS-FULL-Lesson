@@ -2,6 +2,7 @@ import shmoment from './shmoment.js';
 
 // вернет дату понедельника той недели, в которую входит переданный день
 export const getStartOfWeek = (date) => {
+  console.log(typeof date);
   const dateCopy = new Date(date);
   const dayOfWeek = dateCopy.getDay();
   const difference =

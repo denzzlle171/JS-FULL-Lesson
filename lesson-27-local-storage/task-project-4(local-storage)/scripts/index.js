@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initEventForm();
 });
 
-const onStorageChange = (e) => {
-  if (e.key === 'events') {
-    renderEvents();
-  }
-};
+// const onStorageChange = (e) => {
+//   if (e.key === 'events') {
+//     renderEvents();
+//   }
+// };
 
-window.addEventListener('storage', onStorageChange);
+// window.addEventListener('storage', onStorageChange);
