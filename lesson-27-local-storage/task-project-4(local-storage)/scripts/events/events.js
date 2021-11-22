@@ -76,9 +76,15 @@ export const renderEvents = () => {
     .add('days', 7)
     .result();
   // фильтруем события, оставляем только те, что входят в текущую неделю
-  const arrCurentWeekEv = getItem('events').filter(
-    (element) => element.start >= beginWeekDay && element.start < endWeekDay
-  );
+  const arrCurentWeekEv = getItem('events')
+    .map((item) => ({
+      ...item,
+      end: new Date(item.end),
+      start: new Date(item.start),
+    }))
+    .filter(
+      (element) => element.start >= beginWeekDay && element.start < endWeekDay
+    );
 
   // создаем для них DOM элементы с помощью createEventElement
   const arrElemOfEv = arrCurentWeekEv.map((elem) => {

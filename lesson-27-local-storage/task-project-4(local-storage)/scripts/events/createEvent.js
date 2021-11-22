@@ -37,6 +37,7 @@ function onCreateEvent(event) {
     start: new Date(getDateTime(date.value, start.value).toISOString()),
     end: new Date(getDateTime(date.value, end.value).toISOString()),
   };
+
   const events = getItem('events');
   events.push(valueEvent);
   setItem('events', events);
