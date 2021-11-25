@@ -25,9 +25,14 @@
             <button data-direction="next" class="icon-button navigation__nav-icon button_next">
                 <i class="fas fa-chevron-right"></i>
             </button>
+
             <span class="navigation__displayed-month"></span>
+
         </div>
     </header>
+
+
+
     <section class="calendar">
 
         <header class="calendar__header"></header>
@@ -62,11 +67,16 @@
                     <i class="fas fa-bars"></i>
                     <textarea name="description" placeholder="Description" class="event-form__field event-form__description"></textarea>
                     </div>
+                    <!-- fill color event -->
+                    <input type="color" id="color" name="event_color-sett"
+            value="#3191f6">
+                    <!-- fill color event -->
                     <button type="submit" class="event-form__submit-btn">Create</button>
                 </form>
             </div>
         </div>
     </div>
+
     <div class="popup hidden overlay">
         <div class="popup__overlay"></div>
         <div class="popup__content">

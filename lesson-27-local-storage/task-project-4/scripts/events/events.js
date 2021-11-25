@@ -47,7 +47,8 @@ const createEventElement = (event) => {
   blockOfEvent.setAttribute('data-event-time', event.start.getHours());
   blockOfEvent.setAttribute(
     'style',
-    `top: ${event.start.getMinutes()}px; height: ${
+    `background: ${event.color};
+    top: ${event.start.getMinutes()}px; height: ${
       (event.end.getHours() - event.start.getHours()) * 60 +
       (event.end.getMinutes() - event.start.getMinutes())
     }px`

@@ -142,7 +142,7 @@
 }
 
 .navigation {
-  display: block;
+  display: flex;
 }
 .navigation__today-btn {
   margin-left: 30px;
@@ -154,7 +154,19 @@
   z-index: 3;
 }
 .navigation__displayed-month {
+  display: flex;
+  align-items: center;
   margin-left: 30px;
+}
+
+.setting-btn {
+  background-color: white;
+  margin-left: 220px;
+  height: 30px;
+  border: 1px solid #b1b1b1;
+  align-items: center;
+  border-radius: 4px;
+  color: #6e6e6e;
 }
 
 .calendar {
@@ -326,7 +338,6 @@ textarea {
   padding: 10px;
   position: absolute;
   display: block;
-  background-color: #0099ff;
   border-radius: 4px;
   z-index: 1;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.3);
@@ -334,6 +345,13 @@ textarea {
 }
 .event:hover {
   cursor: pointer;
+}
+
+#color {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
 }
 
 * {

@@ -2,6 +2,7 @@ import { getItem, setItem } from '../common/storage.js';
 import { renderEvents } from './events.js';
 import { getDateTime } from '../common/time.utils.js';
 import { closeModal } from '../common/modal.js';
+import { saveColorEvent } from '../common/modal.js';
 
 const eventFormElem = document.querySelector('.event-form');
 const closeEventFormBtn = document.querySelector('.create-event__close-btn');
@@ -31,12 +32,17 @@ function onCreateEvent(event) {
   // на основе полей date, startTime, endTime нужно посчитать дату начала и окончания события
   // date, startTime, endTime - строки. Вам нужно с помощью getDateTime из утилит посчитать start и end объекта события
   const valueEvent = {
-    id: new Date().getTime(), // now time to Timestam
+    id: new Date().getTime(), // now time to Timestam is ID
     title: title.value,
     description: description.value,
     start: new Date(getDateTime(date.value, start.value).toISOString()),
     end: new Date(getDateTime(date.value, end.value).toISOString()),
+    color: saveColorEvent(), // --color--
   };
+
+  // test
+  console.log(valueEvent);
+  // test
 
   const events = getItem('events');
   events.push(valueEvent);
@@ -47,6 +53,8 @@ function onCreateEvent(event) {
   // закрываем форму
   // и запускаем перерисовку событий с помощью renderEvents
   // onCloseEventForm();
+  //
+  saveColorEvent();
 }
 
 submitBtn.addEventListener('click', onCreateEvent);
