@@ -18,8 +18,6 @@ const setMethodsNames = {
   milliseconds: 'setMilliseconds',
 };
 
-// ф-ция помогает добавить или отнять определенное количество времени от заданного
-// урпощенный аналог популярной библиотеки moment
 const shmoment = (date) => {
   let result = new Date(date);
 
@@ -31,9 +29,16 @@ const shmoment = (date) => {
       );
       return this;
     },
+
     subtract(units, value) {
-      return this.add(units, -value);
+      // const currentUnitValue = result[getMethodsNames[units]]();
+      // result = new Date(
+      //   result[setMethodsNames[units]](currentUnitValue - value)
+      // );
+      // return this;
+      return this.add(units, -value); // -- переиспользуем add c (-value)
     },
+
     result() {
       return result;
     },
@@ -42,9 +47,13 @@ const shmoment = (date) => {
   return calculator;
 };
 
-export default shmoment;
-shmoment(new Date(2020, 0, 7, 17, 17, 17))
+// export default shmoment;
+
+const fank = shmoment(new Date(2020, 0, 7, 17, 17, 17))
+  .subtract('years', 17)
   .add('minutes', 2)
   .add('days', 8)
   .subtract('years', 1)
   .result();
+
+console.log(fank);
