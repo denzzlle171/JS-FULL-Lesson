@@ -23,9 +23,11 @@ const renderUserData = (UserData) => {
 const showUserBtnElem = document.querySelector('.name-form__btn');
 const showUserInputElem = document.querySelector('.name-form__input');
 
-onSearchUser = () => {
+const onSearchUser = () => {
   const userName = showUserInputElem.value;
   fetchUserData(userName).then((UserData) => renderUserData(UserData));
 };
 
 showUserBtnElem.addEventListener('click', onSearchUser);
+
+// https://github.com/denzzlle171/JS-FULL-Lesson/tree/master/lesson-33-http-server/task-1
