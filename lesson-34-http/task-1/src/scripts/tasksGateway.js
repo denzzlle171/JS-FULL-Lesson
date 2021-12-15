@@ -27,7 +27,6 @@ export const getTasksList = () => {
   return fetch(baseUrl)
     .then((response) => response.json())
     .then(mapTasks);
-  // .then((tasks) => mapTasks(tasks));
 };
 
 export const deleteTask = (taskId) => {
