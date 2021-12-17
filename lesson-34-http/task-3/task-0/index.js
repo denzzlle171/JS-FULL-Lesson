@@ -35,15 +35,15 @@ const onClick = (e) => {
     body: JSON.stringify(userData),
   });
 
-  form.email.value = '';
-  form.name.value = '';
-  form.password.value = '';
-
   fetch(baseUrl)
     .then((response) => response.json())
     .then((users) => {
-      console.log(users);
+      alert(users);
     });
+
+  form.email.value = '';
+  form.name.value = '';
+  form.password.value = '';
 };
 
 form.addEventListener('input', onInputChange);
