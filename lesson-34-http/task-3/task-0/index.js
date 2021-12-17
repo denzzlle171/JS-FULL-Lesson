@@ -38,7 +38,7 @@ const onClick = (e) => {
   fetch(baseUrl)
     .then((response) => response.json())
     .then((users) => {
-      alert(users);
+      alert(JSON.stringify(users));
     });
 
   form.email.value = '';
