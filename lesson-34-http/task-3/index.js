@@ -14,7 +14,7 @@ const onInputChange = () => {
 };
 //--------------------------------------------------------server_request
 const sentUserData = (userData) => {
-  fetch(baseUrl, {
+  return fetch(baseUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
@@ -23,13 +23,15 @@ const sentUserData = (userData) => {
   });
 };
 
-const getUserData = () => {
-  fetch(baseUrl)
-    .then((response) => response.json())
-    .then((users) => {
-      alert(JSON.stringify(users));
-    });
-};
+// const getUserData = () => {
+//   return fetch(baseUrl)
+//     .then((response) => response.json())
+//     .then((users) => {
+//       alert(JSON.stringify(users));
+//     });
+// };
+//
+// getUserData();
 //---------------------------------------------------------main_function
 const onClick = (e) => {
   e.preventDefault();
@@ -39,8 +41,9 @@ const onClick = (e) => {
     {}
   );
 
-  sentUserData(userData);
-  getUserData();
+  sentUserData(userData)
+    .then((response) => response.json())
+    .then((res) => alert(JSON.stringify(res)));
 
   allInput.forEach((input) => (input.value = ''));
 };
