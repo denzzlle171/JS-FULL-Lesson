@@ -23,15 +23,6 @@ const sentUserData = (userData) => {
   });
 };
 
-// const getUserData = () => {
-//   return fetch(baseUrl)
-//     .then((response) => response.json())
-//     .then((users) => {
-//       alert(JSON.stringify(users));
-//     });
-// };
-//
-// getUserData();
 //---------------------------------------------------------main_function
 const onClick = (e) => {
   e.preventDefault();
@@ -45,7 +36,6 @@ const onClick = (e) => {
     .then((response) => response.json())
     .then((res) => alert(JSON.stringify(res)))
     .then(() => allInput.forEach((input) => (input.value = '')));
-  // allInput.forEach((input) => (input.value = ''));
 };
 
 formElt.addEventListener('input', onInputChange);
