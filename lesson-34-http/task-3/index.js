@@ -43,9 +43,9 @@ const onClick = (e) => {
 
   sentUserData(userData)
     .then((response) => response.json())
-    .then((res) => alert(JSON.stringify(res)));
-
-  allInput.forEach((input) => (input.value = ''));
+    .then((res) => alert(JSON.stringify(res)))
+    .then(() => allInput.forEach((input) => (input.value = '')));
+  // allInput.forEach((input) => (input.value = ''));
 };
 
 formElt.addEventListener('input', onInputChange);
