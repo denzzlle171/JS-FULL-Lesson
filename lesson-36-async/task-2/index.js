@@ -20,30 +20,15 @@ const onSearchUser = async () => {
   const userName = showUserInputElem.value;
 
   try {
-    const UserData = await fetchUserData(userName);
-    renderUserData(UserData);
-    const reposList = await fetchRepositories(UserData.repos_url);
+    const userData = await fetchUserData(userName);
+    renderUserData(userData);
+    const reposList = await fetchRepositories(userData.repos_url);
     renderRepos(reposList);
-  } catch {
+  } catch (err) {
     alert(err.message);
   } finally {
     hideSpinner();
   }
-  // fetchUserData(userName)
-  //   .then((UserData) => {
-  //     renderUserData(UserData);
-  //     return UserData.repos_url;
-  //   })
-  //   .then((url) => fetchRepositories(url))
-  //   .then((reposList) => {
-  //     renderRepos(reposList);
-  //   })
-  //   .catch((err) => {
-  //     alert(err.message);
-  //   })
-  //   .finally(() => {
-  //     hideSpinner();
-  //   });
 };
 
 showUserBtnElem.addEventListener('click', onSearchUser);
